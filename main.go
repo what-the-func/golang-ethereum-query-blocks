@@ -35,7 +35,7 @@ func main() {
 	fmt.Println("Block hash: " + block.Hash().String())
 	fmt.Println("Number of TXs: " + strconv.Itoa(len(block.Transactions())))
 
-	// Query a specific block by number
+	// Query a specific block by hash
 	blockByHash, err := client.BlockByHash(context.Background(), block.Hash())
 	if err != nil {
 		log.Fatal(err)
